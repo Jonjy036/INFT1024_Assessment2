@@ -78,7 +78,6 @@ footer {
   text-align: center;
   text-decoration: none;
   min-height: 500px;
-  color: rgb(217, 155, 40);
   transition: transform 0.2s;
 }
 .home-box:hover {
@@ -93,7 +92,6 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #0e1f9e;
 }
 
 .home-box.services-box {
@@ -142,7 +140,8 @@ footer {
   justify-content: center;
   width: 110px;                  
   height: 64px;                 
-  padding: 0 12px;               
+  padding: 0 12px; 
+  margin-bottom: 50px;              
   background: rgba(255, 255, 255, 0.457);  
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -176,9 +175,10 @@ h1 {
   margin: 0;
 }
 
-. p {
-  font-size: 16px;
+.card-content-box p {
+  font-size: 20px;
   line-height: 1.5;
-  padding-top: 250px;
+
+  color: #000000;
 }
   
