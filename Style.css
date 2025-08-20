@@ -26,9 +26,10 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: clamp(0.75em, 6vw, 10em);
+  gap: clamp(0.75em, 4vw, 10em);
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 
 nav li {
@@ -66,7 +67,7 @@ footer {
 .home-box {
   display: block;
   padding: 20px;
-  background: rgb(187, 255, 0);border: 1px, solid blue;
+  border: 1px, solid blue;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
@@ -75,7 +76,6 @@ footer {
   transition: transform 0.2s;
 }
 .home-box:hover {
-  background: #e9e9e9;
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
@@ -133,6 +133,9 @@ footer {
 h1 {
   text-align: left;
   margin-left: 20px;
+  font-size: 40px;
+  font-family: playfair, serif;
+  flex-wrap: nowrap;
 }
 
   
