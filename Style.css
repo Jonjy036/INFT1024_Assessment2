@@ -47,9 +47,8 @@ nav a {
   color: #000000;
   text-decoration: none;
 }
-
-nav a.active {
-  text-decoration: none;
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -94,7 +93,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #120101;
+  color: #0e1f9e;
 }
 
 .home-box.services-box {
@@ -137,6 +136,33 @@ footer {
 .home-box-lower h2 { margin: 0 0 10px; 
 }
 
+.card-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;                  
+  height: 64px;                 
+  padding: 0 12px;               
+  background: rgba(255, 255, 255, 0.457);  
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #111;
+}
+
+.card-content-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;                  
+  height: 64px;                 
+  padding: 50px 12px;               
+  background: rgba(255, 255, 255, 0.457);  
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
 h1 {
   text-align: left;
   margin-left: 20px;
@@ -145,4 +171,14 @@ h1 {
   white-space: nowrap;
 }
 
+.card-title-box h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+. p {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 250px;
+}
   
