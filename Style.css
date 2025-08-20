@@ -9,9 +9,12 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-image: url("https://images.unsplash.com/vector-1746718658877-599463250724?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-color: rgba(255,255,255,0.5);
-  background-blend-mode: screen;
+  background-color: rgb(255, 255, 255);
+  background-blend-mode: normal;
   background-size: auto;
   background-position: left top;
   background-repeat: no-repeat;
@@ -24,6 +27,10 @@ header {
 }
 
 nav {
+  position: sticky;
+  top: 150px;
+  z-index: 999;
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   gap: clamp(0.75em, 4vw, 10em);
@@ -135,7 +142,7 @@ h1 {
   margin-left: 20px;
   font-size: 40px;
   font-family: playfair, serif;
-  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
   
