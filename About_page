@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Design | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Home Page</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="services.html">Services</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sub Section</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus augue ex, non faucibus nisi ornare ac. Curabitur sed pharetra nibh. Aenean vitae viverra justo. In hac habitasse platea dictumst. Nullam convallis mollis est. Nunc quam mi, porttitor quis nisl dictum, laoreet sollicitudin lorem. Curabitur sit amet rhoncus sapien. Donec id nunc faucibus, viverra mi et, fermentum purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eu ex non eros malesuada porttitor ut at eros. Fusce sit amet aliquet nulla. Pellentesque eu maximus leo, eu commodo magna. Integer tristique turpis eu nulla pulvinar tincidunt. Nullam eleifend arcu sed erat efficitur, sollicitudin euismod leo pretium. Donec a tincidunt mauris, sit amet maximus metus.</p>
+    
+    <p>Proin sodales vitae tortor nec posuere. Nam in bibendum nibh. Donec quam enim, aliquam et condimentum et, suscipit et diam. Maecenas pulvinar enim nisi, id facilisis mi iaculis ut. Nunc ut eros nibh. Praesent sed sodales dolor, eu imperdiet velit. Fusce pellentesque ante at imperdiet lacinia. Integer accumsan nisi id consequat vulputate. Nulla facilisi. Nulla finibus nunc sit amet ligula hendrerit cursus. Aenean sit amet dapibus ex. Etiam posuere dolor urna, nec laoreet ligula porta ac. Sed quis egestas orci. Integer ornare neque ac erat egestas, non fringilla ante sollicitudin.</p>
+    
+    <h2>Another Sub-Section</h2>
+    
+    <p>In a feugiat leo. Maecenas et lobortis ligula. Pellentesque convallis dictum nunc, in molestie metus lacinia non. Praesent lacus turpis, iaculis quis blandit sit amet, consectetur vitae neque. Nullam magna nisi, dapibus ut commodo quis, varius quis dui. Cras nisl ipsum, dictum dapibus mauris non, ultricies cursus dolor. Donec quis lacus sit amet quam varius convallis ut a justo. Pellentesque id arcu quis mauris dignissim tempus. Mauris ultricies enim in consequat viverra.</p>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Interior Design Studio</p>
+  </footer>
+</body>
+</html>
 
