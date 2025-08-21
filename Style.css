@@ -26,6 +26,20 @@ header {
   padding: 1em 0;
 }
 
+.site-title {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 40px;
+  font-family: playfair, serif;
+  white-space: nowrap;
+}
+
+h1.site-title img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
 nav {
   position: sticky;
   top: 150px;
