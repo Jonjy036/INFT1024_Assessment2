@@ -92,7 +92,13 @@ footer {
 }
 
 .about-section-reverse {
+  display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin: 0 auto 24px auto;
+  max-width: 1200px;
+  padding: 40px 20px;
+  align-items: center;
 }
 
 .home-box {
@@ -232,6 +238,12 @@ h1 {
 }
 
 .about-section .about-text p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.about-section-reverse .about-text p {
   margin: 0;
   font-size: 20px;
   line-height: 1.5;
