@@ -18,17 +18,31 @@
   </header>
 
   <nav>
-      <a href="Home_page.html">Home</a> |
-      <a href="About_page.html">About</a> |
-      <a href="Services_Page.html">Services</a> |
-      <a href="Contact_Page.html">Contact</a> |
-      <a href="News_Page.html">News</a>
-    </nav>
+    <a href="Home_page.html">Home</a> |
+    <a href="About_page.html">About</a> |
+    <a href="Services_Page.html">Services</a> |
+    <a href="Contact_Page.html">Contact</a> |
+    <a href="News_Page.html">News</a>
+  </nav>
   <main>
+    <form action="https://your-backend-url.com/receive-message" method="POST">
+    <label for="name">Name (required):</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
 
+    <label for="email">Email Address (required):</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="phone">Phone Number (optional):</label><br />
+    <input type="tel" id="phone" name="phone" /><br /><br />
+
+    <label for="message">Message (required):</label><br />
+    <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+    <button type="submit">Send Message</button>
+  </form>
   </main>
   <footer>
-    <p>&copy; 2025 MK Interior Design</p>
+    <p>&copy; 2025 Interior Design Studio</p>
   </footer>
 </body>
 </html>
