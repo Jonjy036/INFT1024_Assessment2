@@ -265,9 +265,24 @@ h1 {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  position: relative;
 }
 
 .about-section .about-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about-section-reverse .about-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-section-reverse .about-image img {
   width: 100%;
   height: 100%;
   display: block;
