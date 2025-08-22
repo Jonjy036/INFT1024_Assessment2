@@ -1,4 +1,110 @@
+:root {
+  --portfolio-w: clamp(280px, 80vw, 820px);
+  --portfolio-h: clamp(220px, 50vw, 520px);
+  --portfolio-radius: 12px;
+  --portfolio-shadow: 0 12px 28px rgba(0,0,0,.25);
+  --portfolio-border: 10px; /* white border thickness */
+}
 
+.portfolio-section {
+  max-width: 1100px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+}
+
+.portfolio-controls {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 8px 0 14px 0;
+}
+
+.portfolio-control {
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.portfolio-control:hover {
+  color: #0b3a2d; /* slightly darker than header bg for contrast */
+  border-bottom-color: #0b3a2d;
+}
+
+.portfolio-control.active {
+  color: #2b6e9b; /* matches footer color */
+  border-bottom-color: #2b6e9b;
+  cursor: default;
+}
+
+.portfolio-stage {
+  display: grid;
+  place-items: center;
+}
+
+.portfolio-viewport {
+  width: var(--portfolio-w);
+  height: var(--portfolio-h);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--portfolio-radius);
+  background: rgba(0,0,0,0.12);
+  box-shadow: var(--portfolio-shadow);
+}
+
+/* Crossfade stack */
+.portfolio-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .6s ease;
+  will-change: opacity;
+}
+.portfolio-slide.active { opacity: 1; }
+
+/* Card frame: consistent visual area, images scale without distortion */
+.portfolio-card {
+  position: absolute;
+  inset: 0;
+  padding: var(--portfolio-border);
+  box-sizing: border-box;
+  background: #f3f6f5;
+  border-radius: var(--portfolio-radius);
+}
+.portfolio-card-inner {
+  position: absolute;
+  inset: var(--portfolio-border);
+  border-radius: calc(var(--portfolio-radius) - var(--portfolio-border)/2);
+  overflow: hidden;
+  background: #0b0b0e;
+}
+.portfolio-card-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keep aspect ratio, no cropping */
+  object-position: center;
+  display: block;
+  background: #111; /* behind letterboxing */
+}
+
+/* Hint text */
+.portfolio-hint {
+  margin: 10px 0 0 0;
+  color: #000;
+  opacity: .7;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Responsive: ensure it fits small screens */
+@media (max-width: 640px) {
+  .portfolio-controls {
+    gap: 10px;
+  }
+}
 
 
 body {
