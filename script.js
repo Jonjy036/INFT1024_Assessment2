@@ -90,3 +90,86 @@ const portfolios = {
   buildSlides(portfolios[currentPortfolio] || []);
   startTimer();
 })();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const fields = {
+    name: {
+      el: document.getElementById('name'),
+      errorEl: document.getElementById('nameError'),
+      validate: (value) => value.trim().length > 0 || 'Please enter your name.'
+    },
+    email: {
+      el: document.getElementById('email'),
+      errorEl: document.getElementById('emailError'),
+      validate: (value) => {
+        if (value.trim().length === 0) return 'Please enter your email address.';
+        // Simple email pattern; adjust if needed
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(value) || 'Please enter a valid email address.';
+      }
+    },
+    // Phone is optional; you can add pattern checks if you want
+    message: {
+      el: document.getElementById('message'),
+      errorEl: document.getElementById('messageError'),
+      validate: (value) => value.trim().length > 0 || 'Please enter a message.'
+    }
+  };
+
+  // Utility to set error/valid states
+  function setFieldState(el, errorEl, errorMsg) {
+    if (errorMsg === true) {
+      el.classList.remove('is-invalid');
+      el.classList.add('is-valid');
+      if (errorEl) errorEl.textContent = '';
+      return true;
+    } else {
+      el.classList.remove('is-valid');
+      el.classList.add('is-invalid');
+      if (errorEl) errorEl.textContent = errorMsg;
+      return false;
+    }
+  }
+
+  // Validate a single field
+  function validateField(key) {
+    const { el, errorEl, validate } = fields[key];
+    const result = validate(el.value);
+    return setFieldState(el, errorEl, result);
+  }
+
+  // Validate on blur and input for responsive feedback
+  Object.keys(fields).forEach((key) => {
+    const { el } = fields[key];
+    el.addEventListener('blur', () => validateField(key));
+    el.addEventListener('input', () => {
+      // Remove error as soon as it becomes valid
+      const { el, errorEl, validate } = fields[key];
+      const result = validate(el.value);
+      if (result === true && el.classList.contains('is-invalid')) {
+        setFieldState(el, errorEl, true);
+      }
+    });
+  });
+
+  // On submit, validate all required fields
+  form.addEventListener('submit', (e) => {
+    let isFormValid = true;
+
+    Object.keys(fields).forEach((key) => {
+      const valid = validateField(key);
+      if (!valid) isFormValid = false;
+    });
+
+    if (!isFormValid) {
+      e.preventDefault();
+      // Focus first invalid field
+      const firstInvalid = form.querySelector('.is-invalid');
+      if (firstInvalid) firstInvalid.focus();
+    }
+  });
+});
