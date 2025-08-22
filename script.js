@@ -12,6 +12,8 @@ const portfolios = {
   const controls = document.getElementById('portfolioControls');
   const hint = document.getElementById('portfolioHint');
 
+  if (!viewport || !controls) return;
+  
   const INTERVAL_MS = 3000;
   let currentPortfolio = '1';
   let index = 0;
@@ -94,7 +96,10 @@ const portfolios = {
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.toggle-btn');
   if (!btn) return;
+
   const container = btn.previousElementSibling;
+  if (!container || !container.classList.contains('collapsible')) return;
+
   const collapsed = container.getAttribute('data-collapsed') === 'true';
   container.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
   btn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
