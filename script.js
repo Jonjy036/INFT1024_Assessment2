@@ -2,7 +2,7 @@
   // Replace with your actual images (4 per portfolio)
   const portfolios = {
     1: ['Images/portfolio 1/1.jpg','Images/portfolio 1/2.jpg','Images/portfolio 1/3.jpg','Images/portfolio 1/4.jpg'],
-    2: ['Images/portfolio 2/1.jpg','/Images/portfolio 2/2.jpg','Images/portfolio 2/3.jpg','Images/portfolio 2/4.jpg'],
+    2: ['Images/portfolio 2/1.jpg','Images/portfolio 2/2.jpg','Images/portfolio 2/3.jpg','Images/portfolio 2/4.jpg'],
     3: ['Images/portfolio 3/1.jpg','Images/portfolio 3/2.jpg','Images/portfolio 3/3.jpg','Images/portfolio 3/4.jpg'],
     4: ['Images/portfolio 4/1.jpg','Images/portfolio 4/2.jpg','Images/portfolio 4/3.jpg','Images/portfolio 4/4.jpg'],
     5: ['Images/portfolio 5/1.jpg','Images/portfolio 5/2.jpg','Images/portfolio 5/3.jpg','Images/portfolio 5/4.jpg'],
