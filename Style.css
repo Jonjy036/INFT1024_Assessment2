@@ -330,10 +330,50 @@ footer {
   gap: 20px;
 }
 
-.collapsible[data-collapsed="true"] {
-  max-height: 140px;
-  overflow: hidden;
+.news-article {
+  display: grid;
+  justify-items: center; /* center children horizontally */
 }
+
+.collapsible {
+  overflow: hidden;
+  max-height: 1000px;           /* expanded */
+  transition: max-height .3s ease;
+}
+
+.collapsible .collapsible-frame {
+  width: 100%;
+  max-width: 70ch;              /* readable line length when expanded */
+  margin: 0 auto;
+  transition: width .2s ease, max-width .2s ease, padding .2s ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Collapsed: shorter and narrower */
+.collapsible[data-collapsed="true"] {
+  max-height: 100px;
+}
+
+.collapsible[data-collapsed="true"] .collapsible-frame {
+  width: 520px;     /* your requested collapsed width */
+  max-width: 90vw;  /* responsive on small screens */
+  padding: 0;       /* optional: tighter look */
+}
+
+/* Optional: a fade at the bottom to indicate more content */
+.collapsible[data-collapsed="true"] {
+  position: relative;
+}
+.collapsible[data-collapsed="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 36px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.08));
+}
+
 .toggle-btn {
   margin-top: 10px;
   cursor: pointer;
