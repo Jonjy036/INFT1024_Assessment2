@@ -1,11 +1,11 @@
 <script>
   // Replace with your actual images (4 per portfolio)
   const portfolios = {
-    1: ['/Images/portfolio 1/alex-tyson-Y30Yt8NHtHQ-unsplash.jpg.jpg','/Images/portfolio 1/jan-antonin-kolar-Cbil92G0-SE-unsplash.jpg','/Images/portfolio 1/toa-heftiba-c1PnuUmNkt4-unsplash.jpg','/Images/portfolio 1/vinicius-amnx-amano-ALpEkP29Eys-unsplash.jpg'],
-    2: ['/Images/portfolio 2/letizia-agosta-Ml-GpVBupgo-unsplash.jpg','/Images/portfolio 2/lisa-anna-FixDnZKv-5g-unsplash.jpg','/Images/portfolio 2/louis-colbee-HC1K7e08He4-unsplash.jpg','/Images/portfolio 2/tara-sadeghi-cSia_DcTYio-unsplash.jpg'],
-    3: ['/Images/portfolio 3/avi-waxman-9T0vISZehUY-unsplash.jpg','/Images/portfolio 3/clay-banks-ajFZ2q_CjvQ-unsplash.jpg','/Images/portfolio 3/clay-banks-aumLKIgntRQ-unsplash.jpg','/Images/portfolio 3/goran-ivos-aEMpxS5KDG4-unsplash.jpg'],
-    4: ['/Images/portfolio 4/allen-boguslavsky-vkU1oTU1d2Q-unsplash.jpg','/Images/portfolio 4/clay-banks-zGRQYKuNa2E-unsplash.jpg','/Images/portfolio 4/rawkkim-2Dd9XxTktMI-unsplash.jpg','/Images/portfolio 4/yucel-moran-zR6zqRzJpHs-unsplash.jpg'],
-    5: ['/Images/portfolio 5/alex-tyson-jtOwf2TFOfs-unsplash.jpg','/Images/portfolio 5/lotus-design-n-print-MlPWjgevq44-unsplash.jpg','/Images/portfolio 5/planet-volumes-oUrqWiOz_sg-unsplash.jpg','/Images/portfolio 5/uliana-kopanytsia-glRW5ivpwEM-unsplash.jpg'],
+    1: ['Images/portfolio 1/alex-tyson-Y30Yt8NHtHQ-unsplash.jpg','Images/portfolio 1/jan-antonin-kolar-Cbil92G0-SE-unsplash.jpg','Images/portfolio 1/toa-heftiba-c1PnuUmNkt4-unsplash.jpg','Images/portfolio 1/vinicius-amnx-amano-ALpEkP29Eys-unsplash.jpg'],
+    2: ['Images/portfolio 2/letizia-agosta-Ml-GpVBupgo-unsplash.jpg','/Images/portfolio 2/lisa-anna-FixDnZKv-5g-unsplash.jpg','Images/portfolio 2/louis-colbee-HC1K7e08He4-unsplash.jpg','Images/portfolio 2/tara-sadeghi-cSia_DcTYio-unsplash.jpg'],
+    3: ['Images/portfolio 3/avi-waxman-9T0vISZehUY-unsplash.jpg','Images/portfolio 3/clay-banks-ajFZ2q_CjvQ-unsplash.jpg','Images/portfolio 3/clay-banks-aumLKIgntRQ-unsplash.jpg','Images/portfolio 3/goran-ivos-aEMpxS5KDG4-unsplash.jpg'],
+    4: ['Images/portfolio 4/allen-boguslavsky-vkU1oTU1d2Q-unsplash.jpg','Images/portfolio 4/clay-banks-zGRQYKuNa2E-unsplash.jpg','Images/portfolio 4/rawkkim-2Dd9XxTktMI-unsplash.jpg','Images/portfolio 4/yucel-moran-zR6zqRzJpHs-unsplash.jpg'],
+    5: ['Images/portfolio 5/alex-tyson-jtOwf2TFOfs-unsplash.jpg','Images/portfolio 5/lotus-design-n-print-MlPWjgevq44-unsplash.jpg','Images/portfolio 5/planet-volumes-oUrqWiOz_sg-unsplash.jpg','Images/portfolio 5/uliana-kopanytsia-glRW5ivpwEM-unsplash.jpg'],
   };
 
   (function initPortfolioCarousel() {
