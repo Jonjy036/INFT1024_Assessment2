@@ -89,5 +89,4 @@ const portfolios = {
   // Init
   buildSlides(portfolios[currentPortfolio] || []);
   startTimer();
-  hint.textContent = 'Auto-rotating every 3s. Hover to pause.';
 })();
