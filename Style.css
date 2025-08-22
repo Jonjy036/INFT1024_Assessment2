@@ -6,6 +6,7 @@
   --portfolio-border: 10px; /* white border thickness */
 }
 
+/* Portfolio section */
 .portfolio-section {
   max-width: 1100px;
   margin: 20px auto 40px auto;
@@ -28,12 +29,10 @@
   border-bottom: 1px dashed transparent;
   transition: color .15s ease, border-color .15s ease;
 }
-
 .portfolio-control:hover {
   color: #0b3a2d; /* slightly darker than header bg for contrast */
   border-bottom-color: #0b3a2d;
 }
-
 .portfolio-control.active {
   color: #2b6e9b; /* matches footer color */
   border-bottom-color: #2b6e9b;
@@ -74,6 +73,7 @@
   background: #f3f6f5;
   border-radius: var(--portfolio-radius);
 }
+
 .portfolio-card-inner {
   position: absolute;
   inset: var(--portfolio-border);
@@ -81,6 +81,7 @@
   overflow: hidden;
   background: #0b0b0e;
 }
+
 .portfolio-card-inner img {
   width: 100%;
   height: 100%;
