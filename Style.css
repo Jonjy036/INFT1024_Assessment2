@@ -29,10 +29,12 @@
   border-bottom: 1px dashed transparent;
   transition: color .15s ease, border-color .15s ease;
 }
+
 .portfolio-control:hover {
   color: #0b3a2d; /* slightly darker than header bg for contrast */
   border-bottom-color: #0b3a2d;
 }
+
 .portfolio-control.active {
   color: #2b6e9b; /* matches footer color */
   border-bottom-color: #2b6e9b;
@@ -62,6 +64,7 @@
   transition: opacity .6s ease;
   will-change: opacity;
 }
+
 .portfolio-slide.active { opacity: 1; }
 
 /* Card frame: consistent visual area, images scale without distortion */
@@ -100,12 +103,7 @@
   text-align: center;
 }
 
-/* Responsive: ensure it fits small screens */
-@media (max-width: 640px) {
-  .portfolio-controls {
-    gap: 10px;
-  }
-}
+
 
 
 body {
