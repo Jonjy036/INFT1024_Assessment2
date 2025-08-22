@@ -91,3 +91,12 @@ const portfolios = {
   startTimer();
 })();
 
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.toggle-btn');
+  if (!btn) return;
+  const container = btn.previousElementSibling;
+  const collapsed = container.getAttribute('data-collapsed') === 'true';
+  container.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
+  btn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
+  btn.textContent = collapsed ? 'Show less' : 'Read more';
+});

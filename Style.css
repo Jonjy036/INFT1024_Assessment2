@@ -330,7 +330,14 @@ footer {
   gap: 20px;
 }
 
-
+.collapsible[data-collapsed="true"] {
+  max-height: 140px;
+  overflow: hidden;
+}
+.toggle-btn {
+  margin-top: 10px;
+  cursor: pointer;
+}
 
 
 h1 {
