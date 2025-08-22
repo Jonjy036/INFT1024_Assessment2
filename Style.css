@@ -330,6 +330,47 @@ footer {
   gap: 20px;
 }
 
+/* ===== Contact form: inputs, textarea, and validation ===== */
+
+/* Make inputs and textarea full-width but nicely limited */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Bigger message box via height; rows is a fallback */
+#message {
+  min-height: 180px; /* adjust as needed */
+  resize: vertical;  /* allow user to resize vertically */
+}
+
+/* Error text styling */
+.error {
+  display: block;
+  color: #b00020;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Highlight invalid inputs */
+.is-invalid {
+  border: 2px solid #b00020;
+  outline: none;
+}
+
+/* Optional: success/valid highlight */
+.is-valid {
+  border: 2px solid #2e7d32;
+  outline: none;
+}
+
+
 h1 {
   text-align: left;
   font-size: 40px;
