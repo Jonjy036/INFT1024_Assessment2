@@ -2,31 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interior Design | Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="Style.css">
+  
   <script defer src="script.js"></script>
 </head>
 
 <body>
   <header>
     <h1 class="site-title">
-      <img src="Images/MK interior design transparent.png" alt="MK Interior Design">
+      <a href="Home_page.html">
+        <img src="Images/MK interior design transparent.png" alt="MK Interior Design">        
+      </a>
+      <section class="socials">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook"></i> </a> <a href="https://twitter.com" target="_blank" aria-label="Twitter"> <i class="fab fa-twitter"></i> </a> <a href="https://instagram.com" target="_blank" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a>
+      </section>
     </h1>
-    
   </header>
 
   <nav>
-      <a href="Home_page.html">Home</a> |
-      <a href="About_page.html">About</a> |
-      <a href="Services_Page.html">Portfolio</a> |
-      <a href="Contact_Page.html">Contact</a> |
-      <a href="News_Page.html">News/Blog</a>
+      <ul><a href="Home_page.html">Home</a></ul>
+      <ul><a href="About_page.html">About</a></ul>
+      <ul><a href="Services_Page.html">Portfolio</a></ul>
+      <ul><a href="Contact_Page.html">Contact</a></ul>
+      <ul><a href="News_Page.html">News/Blog</a></ul>
     </nav>
 
   <main>
-    <section class="news-article">
+    <article class="news-article">
     
       <h2>News Item dated: 25th September 2024</h2>
       <div class="collapsible" data-collapsed="true">
@@ -38,9 +42,9 @@
       </div>
       <button class="toggle-btn" type="button">Read more</button>
 
-    </section>
+    </article>
     
-    <section class="news-article">
+    <article class="news-article">
     
       <h2>News Item Dated 3rd February 2024</h2>
       <div class="collapsible" data-collapsed="true">
@@ -50,8 +54,8 @@
       </div>
       <button class="toggle-btn" type="button">Read more</button>
 
-    </section>
-    <section class="news-article">
+    </article>
+    <article class="news-article">
     
       <h2>News Item Dated 1st January 2024</h2>
       <div class="collapsible" data-collapsed="true">
@@ -61,7 +65,7 @@
       </div>
       <button class="toggle-btn" type="button">Read more</button>
 
-    </section>
+    </article>
 
   </main>
 
