@@ -120,6 +120,19 @@ header {
   padding: 1em 0;
 }
 
+.socials {
+  position: absolute;
+  font-size: 20px;
+  top: 30px;
+  right: 20px;
+}
+
+.socials a {
+  color: #000000;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
 .site-title {
   text-align: left;
   margin-left: 20px;
