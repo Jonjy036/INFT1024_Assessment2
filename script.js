@@ -93,6 +93,61 @@ const portfolios = {
   startTimer();
 })();
 
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the form from submitting
+
+    // Clear previous error messages
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('phoneError').textContent = '';
+    document.getElementById('messageError').textContent = '';
+
+    let valid = true;
+
+    // Validate Name
+    const name = document.getElementById('name').value.trim();
+    if (name === '') {
+      document.getElementById('nameError').textContent = 'Name is required.';
+      valid = false;
+    }
+
+    // Validate Email
+    const email = document.getElementById('email').value.trim();
+    if (email === '') {
+      document.getElementById('emailError').textContent = 'Email is required.';
+      valid = false;
+    } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+      document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+      valid = false;
+    }
+
+    // Validate Message
+    const message = document.getElementById('message').value.trim();
+    if (message === '') {
+      document.getElementById('messageError').textContent = 'Message is required.';
+      valid = false;
+    }
+
+    // (Optional) Validate Phone Number (basic check)
+    const phone = document.getElementById('phone').value.trim();
+    if (phone !== '' && !/^[0-9+\s()-]{6,}$/.test(phone)) {
+      document.getElementById('phoneError').textContent = 'Please enter a valid phone number.';
+      valid = false;
+    }
+
+    // If all fields are valid, show a thank you message (since there's no backend)
+    if (valid) {
+      alert('Thank you for your message! (Form not actually sent.)');
+      form.reset();
+    }
+  });
+});
+
+
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.toggle-btn');
   if (!btn) return;
