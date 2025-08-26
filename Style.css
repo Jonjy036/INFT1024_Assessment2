@@ -123,14 +123,14 @@ footer {
 }
 
 .home-box.about-box {
-  background-image: url("https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("Images/Home/maria-orlova-b37mDyPzdJM-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .home-box.services-box {
-  background-image: url("https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("Images/Home/jason-wang-5MG8cQbw-T8-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,7 +138,7 @@ footer {
 }
 
 .home-box.contact-box {
-  background-image: url("https://plus.unsplash.com/premium_photo-1676968002767-1f6a09891350?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("Images/Home/jubeo-hernandez-dDWeZLYXrE8-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -150,7 +150,7 @@ footer {
   display: block;
   padding: 20px;
   border-radius: 8px;
-  background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("Images/Home/spacejoy-9M66C_w_ToM-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
