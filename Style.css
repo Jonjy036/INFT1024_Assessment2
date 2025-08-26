@@ -175,9 +175,7 @@ footer {
   width: 110px;                  
   height: 64px;                 
   padding: 0 12px;
-  margin-left: auto;
-  margin-right: auto;  
-  margin-bottom: 50px;              
+  margin: 0 auto 50px;               
   background: rgba(255, 255, 255, 0.7);  
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -192,8 +190,7 @@ footer {
   width: 110px;                
   height: 64px;                 
   padding: 50px 12px;
-  margin-left: auto;
-  margin-right: auto;          
+  margin: 0 auto;          
   background: rgba(255, 255, 255, 0.7);  
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -324,15 +321,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* About Page */
 .about-section {
   display: grid;
@@ -353,9 +341,6 @@ footer {
   padding: 40px 20px;
   align-items: center;
 }
-
-
-
 
 
 /* News Page */
@@ -507,7 +492,6 @@ h1 {
 .card-content-box p {
   font-size: 20px;
   line-height: 1.5;
-
   color: #000000;
 }
 
@@ -540,4 +524,3 @@ h1 {
   display: block;
   object-fit: cover;
 }
-  
