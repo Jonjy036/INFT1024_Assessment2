@@ -439,6 +439,19 @@ footer {
   background: #1d4e6d;
 }
 
+.modal {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;
+  z-index: 10000;
+}
+.modal-content {
+  background: #fff; padding: 2em; border-radius: 8px; max-width: 600px; width: 90vw;
+  max-height: 80vh; overflow-y: auto;
+}
+.close {
+  float: right; font-size: 1.5em; cursor: pointer;
+}
+
 fieldset .error {
   color: red;
   font-size: 0.9em;

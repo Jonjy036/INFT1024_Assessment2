@@ -147,6 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.getElementById('open-privacy-modal').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('privacy-modal').style.display = 'flex';
+});
+document.getElementById('close-privacy-modal').addEventListener('click', function() {
+  document.getElementById('privacy-modal').style.display = 'none';
+});
+// Optional: close modal when clicking outside content
+document.getElementById('privacy-modal').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
+
 
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.toggle-btn');
