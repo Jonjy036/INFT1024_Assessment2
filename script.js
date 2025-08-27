@@ -94,81 +94,100 @@ const portfolios = {
 })();
 
 // Wait until the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  // Contact form logic (only if the form exists on this page)
   const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Stop the form from submitting
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop the form from submitting
+      // Clear previous error messages
+      const nameErr = document.getElementById('nameError');
+      const emailErr = document.getElementById('emailError');
+      const phoneErr = document.getElementById('phoneError');
+      const msgErr = document.getElementById('messageError');
+      if (nameErr) nameErr.textContent = '';
+      if (emailErr) emailErr.textContent = '';
+      if (phoneErr) phoneErr.textContent = '';
+      if (msgErr) msgErr.textContent = '';
 
-    // Clear previous error messages
-    document.getElementById('nameError').textContent = '';
-    document.getElementById('emailError').textContent = '';
-    document.getElementById('phoneError').textContent = '';
-    document.getElementById('messageError').textContent = '';
+      let valid = true;
 
-    let valid = true;
+      // Validate Name
+      const nameEl = document.getElementById('name');
+      const name = nameEl ? nameEl.value.trim() : '';
+      if (name === '' && nameErr) {
+        nameErr.textContent = 'Name is required.';
+        valid = false;
+      }
 
-    // Validate Name
-    const name = document.getElementById('name').value.trim();
-    if (name === '') {
-      document.getElementById('nameError').textContent = 'Name is required.';
-      valid = false;
+      // Validate Email
+      const emailEl = document.getElementById('email');
+      const email = emailEl ? emailEl.value.trim() : '';
+      if (email === '' && emailErr) {
+        emailErr.textContent = 'Email is required.';
+        valid = false;
+      } else if (email && !/^[^@]+@[^@]+\.[^@]+$/.test(email) && emailErr) {
+        emailErr.textContent = 'Please enter a valid email address.';
+        valid = false;
+      }
+
+      // Validate Message
+      const messageEl = document.getElementById('message');
+      const message = messageEl ? messageEl.value.trim() : '';
+      if (message === '' && msgErr) {
+        msgErr.textContent = 'Message is required.';
+        valid = false;
+      }
+
+      // Optional: Validate Phone Number (basic check)
+      const phoneEl = document.getElementById('phone');
+      const phone = phoneEl ? phoneEl.value.trim() : '';
+      if (phone && !/^[0-9+\s()-]{6,}$/.test(phone) && phoneErr) {
+        phoneErr.textContent = 'Please enter a valid phone number.';
+        valid = false;
+      }
+
+      // If all fields are valid, show a thank you message (since there's no backend)
+      if (valid) {
+        alert('Thank you for your message! (Form not actually sent.)');
+        form.reset();
+      }
+    });
+
+    // Privacy modal wiring (only if present)
+    const openPrivacy = document.getElementById('open-privacy-modal');
+    const closePrivacy = document.getElementById('close-privacy-modal');
+    const privacyModal = document.getElementById('privacy-modal');
+
+    if (openPrivacy && privacyModal) {
+      openPrivacy.addEventListener('click', function (e) {
+        e.preventDefault();
+        privacyModal.style.display = 'flex';
+      });
     }
-
-    // Validate Email
-    const email = document.getElementById('email').value.trim();
-    if (email === '') {
-      document.getElementById('emailError').textContent = 'Email is required.';
-      valid = false;
-    } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
-      document.getElementById('emailError').textContent = 'Please enter a valid email address.';
-      valid = false;
+    if (closePrivacy && privacyModal) {
+      closePrivacy.addEventListener('click', function () {
+        privacyModal.style.display = 'none';
+      });
+      privacyModal.addEventListener('click', function (e) {
+        if (e.target === this) this.style.display = 'none';
+      });
     }
+  }
 
-    // Validate Message
-    const message = document.getElementById('message').value.trim();
-    if (message === '') {
-      document.getElementById('messageError').textContent = 'Message is required.';
-      valid = false;
-    }
+  // Collapsible news toggles (works on any page that has .collapsible)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
 
-    // (Optional) Validate Phone Number (basic check)
-    const phone = document.getElementById('phone').value.trim();
-    if (phone !== '' && !/^[0-9+\s()-]{6,}$/.test(phone)) {
-      document.getElementById('phoneError').textContent = 'Please enter a valid phone number.';
-      valid = false;
-    }
+    // The JS expects the button to be immediately after the collapsible block
+    const container = btn.previousElementSibling;
+    if (!container || !container.classList.contains('collapsible')) return;
 
-    // If all fields are valid, show a thank you message (since there's no backend)
-    if (valid) {
-      alert('Thank you for your message! (Form not actually sent.)');
-      form.reset();
-    }
+    const collapsed = container.getAttribute('data-collapsed') === 'true';
+    container.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
+    btn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
+    btn.textContent = collapsed ? 'Show less' : 'Read more';
   });
-});
-
-document.getElementById('open-privacy-modal').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('privacy-modal').style.display = 'flex';
-});
-document.getElementById('close-privacy-modal').addEventListener('click', function() {
-  document.getElementById('privacy-modal').style.display = 'none';
-});
-// Optional: close modal when clicking outside content
-document.getElementById('privacy-modal').addEventListener('click', function(e) {
-  if (e.target === this) this.style.display = 'none';
-});
-
-
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.toggle-btn');
-  if (!btn) return;
-
-  const container = btn.previousElementSibling;
-  if (!container || !container.classList.contains('collapsible')) return;
-
-  const collapsed = container.getAttribute('data-collapsed') === 'true';
-  container.setAttribute('data-collapsed', collapsed ? 'false' : 'true');
-  btn.setAttribute('aria-expanded', collapsed ? 'true' : 'false');
-  btn.textContent = collapsed ? 'Show less' : 'Read more';
 });
