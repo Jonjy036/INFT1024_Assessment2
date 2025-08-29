@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  <!--Common Header for all pages-->
   <header>
     <h1 class="site-title">
       <a href="Home_page.html">
@@ -21,6 +22,7 @@
     </h1>
   </header>
 
+  <!--Common Nav bar for all pages-->
   <nav>
       <ul><a href="Home_page.html">Home</a></ul>
       <ul><a href="About_page.html">About</a></ul>
@@ -30,32 +32,38 @@
     </nav>
 
   <main>
+    <!--Contact Form Section-->
     <div class="contact-form-container">
     <form id="contactForm" novalidate>
       <fieldset>
         <legend>Contact Us</legend>
-
+        <!--Name-->
         <label for="name">Name <span style="color:#c00">*</span></label>
         <input type="text" id="name" name="name" required aria-required="true" />
         <span class="error" id="nameError"></span>
-
+        <!--Email-->
         <label for="email">Email Address <span style="color:#c00">*</span></label>
         <input type="email" id="email" name="email" required aria-required="true" />
         <span class="error" id="emailError"></span>
-
+        <!--Phone-->
         <label for="phone">Phone Number (optional)</label>
         <input type="tel" id="phone" name="phone" />
         <span class="error" id="phoneError"></span>
-
+        <!--Message-->
         <label for="message">Message <span style="color:#c00">*</span></label>
         <textarea id="message" name="message" rows="10" required aria-required="true"></textarea>
         <span class="error" id="messageError"></span>
-
+        <!--Submit button-->
         <button type="submit">Send Message</button>
       </fieldset>
+      
+      <!--Privacy Policy-->
+      <!--Privacy note at the bottom of the form-->
       <p class="privacy-note">
         Your information will only be used to respond to your enquiry.
-        <a href="privacy" id="open-privacy-modal">Read our Privacy Policy</a>
+        <a href="privacy" id="open-privacy-modal">Read our Privacy Policy</a> <!--Privacy policy button-->
+        
+        <!--Modal (pop-up) used for dipslaying privacy policy-->
         <div id="privacy-modal" class="modal" style="display:none;">
           <div class="modal-content">
             <span id="close-privacy-modal" class="close">&times;</span>
@@ -106,6 +114,7 @@
     </form>
   </div>
   </main>
+  <!--Common footer across all pages-->
   <footer>
     <p>&copy; 2025 MK Interior Design</p>
   </footer>
