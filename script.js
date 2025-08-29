@@ -6,7 +6,7 @@ const portfolios = {
   4: ['Images/portfolio 4/1.jpg','Images/portfolio 4/2.jpg','Images/portfolio 4/3.jpg','Images/portfolio 4/4.jpg'],
   5: ['Images/portfolio 5/1.jpg','Images/portfolio 5/2.jpg','Images/portfolio 5/3.jpg','Images/portfolio 5/4.jpg'],
 };
-
+// Portfolio carousel logic
 (function initPortfolioCarousel() {
   const viewport = document.getElementById('portfolioViewport');
   const controls = document.getElementById('portfolioControls');
@@ -14,12 +14,12 @@ const portfolios = {
 
   if (!viewport || !controls) return;
   
-  const INTERVAL_MS = 3000;
+  const INTERVAL_MS = 3000; // 3 seconds
   let currentPortfolio = '1';
   let index = 0;
   let timer = null;
   let paused = false;
-
+  // Build slides for selected portfolio
   function buildSlides(imgs) {
     viewport.innerHTML = '';
     imgs.slice(0, 4).forEach((src, i) => {
@@ -45,7 +45,7 @@ const portfolios = {
     });
     index = 0;
   }
-
+  // Set active slide by index
   function setActiveSlide(next) {
     const slides = Array.from(viewport.querySelectorAll('.portfolio-slide'));
     if (!slides.length) return;
@@ -53,7 +53,7 @@ const portfolios = {
     slides[next % slides.length].classList.add('active');
     index = next % slides.length;
   }
-
+  // Timer logic
   function startTimer() {
     stopTimer();
     timer = setInterval(() => {
@@ -88,7 +88,7 @@ const portfolios = {
     startTimer();
   });
 
-  // Init
+  // Initial setup
   buildSlides(portfolios[currentPortfolio] || []);
   startTimer();
 })();
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Privacy modal wiring (only if present)
+    // Privacy modal wiring (only if the elements exist)
     const openPrivacy = document.getElementById('open-privacy-modal');
     const closePrivacy = document.getElementById('close-privacy-modal');
     const privacyModal = document.getElementById('privacy-modal');
